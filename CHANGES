@@ -1,0 +1,15 @@
+Change Log for File::Path::Localize
+===================================
+
+v1.0.1 (on 01-04-2004)
+----------------------
+
+ * Use File::Spec for filename handling to be portable across OSs.
+ * Fix building of RPMs
+
+v1.0.0: (12-02-2004)
+--------------------
+
+ * Initial release.
+  
+  

@@ -18,7 +18,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
-# $Id: Document.pm,v 1.4 2002/01/20 19:55:12 dan Exp $
+# $Id: Localize.pm,v 1.2 2004/03/31 18:05:36 dan Exp $
 
 =pod
 
@@ -53,11 +53,11 @@ package File::Path::Localize;
 
 use strict;
 use Carp qw(confess);
+use File::Spec;
 
 use vars qw($VERSION);
 
-### The package version, both in 1.23 style *and* usable by MakeMaker:
-$VERSION = substr q$Revision: 1.0.0 $, 10;
+$VERSION = "1.0.1";
 
 =item my $filename = locate(filename => $filename, locales => \@locales, path => \@path);
 
@@ -75,11 +75,13 @@ sub locate {
     return $filename if $filename eq "-";
     
     foreach my $filename (expand(filename => $filename, locales => $locales)) {
-	if ($filename =~ /^\//) {
+        my $rootdir = File::Spec->rootdir;
+	if ($filename =~ /^$rootdir/) {
 	    return $filename if -e $filename;
 	} else {
 	    foreach my $path (@{$path}) {
-		return "$path/$filename" if -e "$path/$filename";
+		my $file = File::Spec->catfile($path, $filename);
+		return $file if -e $file;
 	    }
 	}
     }

@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.2 2001/03/15 16:29:51 dan Exp $
+# $Id: Makefile.PL,v 1.2 2004/03/31 18:05:36 dan Exp $
 # -*- perl -*-
 
 use ExtUtils::MakeMaker;
@@ -6,6 +6,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
 	      NAME => "File::Path::Localize",
 	      VERSION_FROM => "lib/File/Path/Localize.pm",
+	      AUTHOR => "Daniel P. Berrange (dan[at]berrange[dot]com)",
 
 	      dist =>
 	      {

@@ -19,8 +19,8 @@ echo $NAME.spec >> MANIFEST
 make
 make test
 
-make install INSTALLMAN3DIR=$AUTO_BUILD_PREFIX/man/man3
+make install
 
 rm -f $NAME-*.tar.gz
 make dist
-rpm -ta --clean $NAME-*.tar.gz
+rpmbuild -ta --clean $NAME-*.tar.gz
