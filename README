@@ -1,0 +1,15 @@
+File::Path::Localize - localization of file paths
+-------------------------------------------------
+
+This module provides functions for generating and
+resolving filenames based on a set of preferred
+locales.
+
+Feedback, bug reports, patches
+------------------------------
+
+Please send patches in unified diff format to:
+
+	Daniel Berrange <dan@berrange.com>
+
+-- End

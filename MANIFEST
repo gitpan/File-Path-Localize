@@ -1,0 +1,13 @@
+AUTHORS
+COPYING
+File-Path-Localize.spec
+File-Path-Localize.spec.PL
+INSTALL
+MANIFEST
+MANIFEST.SKIP
+Makefile
+Makefile.PL
+README
+lib/File/Path/Localize.pm
+rollingbuild.sh
+t/005Localize.t
